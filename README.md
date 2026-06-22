@@ -13,17 +13,13 @@ The system is designed for research-paper question answering, but the same archi
 ## Features
 
 - PDF ingestion into a persistent Chroma vector database
-- Recursive text chunking with configurable chunk size and overlap
-- Ollama embeddings for dense retrieval
-- BM25 keyword retrieval
-- Hybrid retrieval through LangChain `EnsembleRetriever`
+- Hybrid search with Semantic similarity and BM25 keyword retrieval
 - Cross-encoder reranking with relevance scores
 - Automatic routing between document-grounded RAG answers and general answers
 - Streaming chat responses through FastAPI Server-Sent Events
 - Multi-turn conversation memory within each chat
 - Chat history persistence with SQLite
 - Runtime LLM selection from `ollama list`
-- Frontend PDF upload and source display
 - RAGAS evaluation dataset and runner under `eval/`
 
 ## Repository Structure
