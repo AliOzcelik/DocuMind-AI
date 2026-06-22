@@ -6,8 +6,8 @@ The system is designed for research-paper question answering, but the same archi
 
 ## Outputs
 <p>
-  <img src="images/logo.png" width="45%">
-  <img src="images/app.png" width="45%">
+  <img src="images/image.png" width="45%">
+  <img src="images/app.png" width="55%">
 </p>
 
 ## Features
