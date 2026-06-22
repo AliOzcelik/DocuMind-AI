@@ -4,6 +4,12 @@ DocuMind AI is a local Retrieval-Augmented Generation (RAG) chat application for
 
 The system is designed for research-paper question answering, but the same architecture can be used for any PDF corpus.
 
+## Outputs
+<p>
+  <img src="images/logo.png" width="45%">
+  <img src="images/app.png" width="45%">
+</p>
+
 ## Features
 
 - PDF ingestion into a persistent Chroma vector database
