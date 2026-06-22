@@ -25,7 +25,7 @@ The system is designed for research-paper question answering, but the same archi
 ## Repository Structure
 
 ```text
-RAG_system/
+DocuMind-AI/
 ├── data/pdf/                 # Main PDF corpus
 ├── ragas_data/               # PDFs used for RAGAS sample dataset generation
 ├── chroma_db/                # Persisted Chroma vector database
