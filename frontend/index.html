@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DocuMind</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="../images/logo.png" alt="" />
+      </span>
+      <span class="brand-name" aria-label="DocuMind"><span class="brand-docu">Docu</span><span class="brand-mind">Mind</span></span>
+    </div>
+
+    <button class="new-chat" id="newChat">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      New chat
+    </button>
+
+    <nav class="history" id="history"></nav>
+
+    <div class="sidebar-foot">
+      <span class="status" id="status"><i class="dot"></i><span id="statusText">Connecting…</span></span>
+      <span class="model" id="model"></span>
+    </div>
+  </aside>
+
+  <main class="chat">
+    <header class="chat-head">
+      <button class="icon-btn menu" id="menuBtn" aria-label="Toggle chats">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+      <div class="chat-headings">
+        <h1 class="chat-title" id="chatTitle">New chat</h1>
+        <p class="chat-sub">Answers grounded in your indexed library</p>
+      </div>
+      <label class="model-picker">
+        <span>Model</span>
+        <select id="modelSelect" aria-label="Choose Ollama model">
+          <option value="">Loading models...</option>
+        </select>
+      </label>
+    </header>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="composer">
+      <label class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept="application/pdf" multiple hidden />
+        <span class="dz-ico">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M13 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9l-6-6Z" stroke="currentColor" stroke-width="1.5"/><path d="M13 3v6h6M12 17v-5m-2.5 2.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </span>
+        <span class="dz-text"><strong>Drop a PDF</strong> or click to add it to your library</span>
+      </label>
+
+      <form class="input-row" id="composer">
+        <textarea id="input" rows="1" placeholder="Ask DocuMind about your library…"></textarea>
+        <button type="submit" class="send" id="send" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <aside class="context">
+    <header class="context-head">
+      <h2>Context</h2>
+      <span class="context-count" id="contextCount"></span>
+    </header>
+    <div class="context-list" id="contextList"></div>
+  </aside>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
